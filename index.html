@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample</title>
+  <style>
+    .parent {
+      display: none;
+    }
+    .child1 {
+        display: none;
+      }
+    .active ul{
+      display: inline;
+    }
+
+    .triangle01 p{
+        display: block;
+    }
+    .triangle01{ 
+        width: 0;
+        height: 0;
+        border-top: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-bottom: solid 15px transparent;
+        border-left: solid 15px #697b91;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <div class="triangle01"></div>
+        <p class="parent" onclick="func1(this)">親要素1
+            <p class="child1">いいね</p>
+        </p>
+    
+    <div class="triangle01">
+        <li class="parent" onclick="func1(this)">親要素2
+            <ul>
+                <li>子要素2-1</li>
+                <li>子要素2-2</li>
+            </ul>
+        </li>
+    </div>
+  </ul>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
