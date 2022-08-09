@@ -1,7 +1,12 @@
 function func1(e) {
-    $(".child1").each(
-        $(this).addClass("active")
-    )
+    id = e.getAttribute('class').split(' ')
+    /* e.classList.toggle("active") */
+    console.log(id[0])
+    $(`#${id}`).children().toggleClass('active')
 }
-console.log(8888);
-console.log($(".parent").children());
+
+function func2(e) {
+    id = e.getAttribute('class')
+    $(`#${id}`).children().toggleClass('active')
+    console.log(id, $(`#${id}`))
+}

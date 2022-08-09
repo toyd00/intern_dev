@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sample</title>
   <style>
-    .parent {
+    .parent ul {
       display: none;
     }
+
     .child1 {
-        display: none;
-      }
-    .active ul{
-      display: inline;
+      display: none;
     }
 
-    .triangle01 p{
-        display: block;
+    .active {
+      display: block;
     }
-    .triangle01{ 
-        width: 0;
-        height: 0;
-        border-top: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-bottom: solid 15px transparent;
-        border-left: solid 15px #697b91;
+
+    .active ul {
+      display: block;
+    }
+
+    .triangle01 p {
+      display: block;
+    }
+
+    .triangle01 {
+      width: 0;
+      height: 0;
+      border-top: solid 15px transparent;
+      border-right: solid 15px transparent;
+      border-bottom: solid 15px transparent;
+      border-left: solid 15px #697b91;
     }
   </style>
 </head>
+
 <body>
   <ul>
-    <div class="triangle01"></div>
-        <p class="parent" onclick="func1(this)">親要素1
-            <p class="child1">いいね</p>
-        </p>
-    
-    <div class="triangle01">
-        <li class="parent" onclick="func1(this)">親要素2
-            <ul>
-                <li>子要素2-1</li>
-                <li>子要素2-2</li>
-            </ul>
+    <!-- <div class="triangle01"></div> -->
+    <p class="1_0" onclick="func1(this)">親要素1</p>
+    <div id="1_0">
+      <p class="1_1 child1" onclick="func1(this)">子要素1-1</p>
+      <div id="1_1">
+        <p class="1_1_1 child1" onclick="func1(this)">孫要素1-1-1</p>
+        <p class="1_1_2 child1" onclick="func1(this)">孫要素1-1-2</p>
+        <p class="1_1_3 child1" onclick="func1(this)">孫要素1-1-3</p>
+        <p class="1_1_4 child1" onclick="func1(this)">孫要素1-1-4</p>
+      </div>
+      <p class="child1" onclick="func1(this)">子要素1-2</p>
+      <div id="1_2"></div>
+      <p class="1_3 child1" onclick="func1(this)">子要素1-3</p>
+      <p class="1_4 child1" onclick="func1(this)">子要素1-4</p>
+    </div>
+    <!-- <div class="triangle01"> -->
+    <li class="2_0" onclick="func2(this)">親要素2
+      <ul id="2_0">
+        <li class="2_1 child1" onclick="func2(this)">子要素2-1
+          <ul id="2_1">
+            <li class="2_2 child1" onclick="func1(this)">孫要素2-1-1</li>
+            <li class="2_2 child1" onclick="func2(this)">孫要素2-1-2</li>
+          </ul>
         </li>
+        <li class="2_1 child1" onclick="func2(this)">子要素2-2</li>
+      </ul>
+    </li>
     </div>
   </ul>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
