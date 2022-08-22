@@ -1,0 +1,125 @@
+@import url(sanitize.css);
+
+header {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: solid gainsboro;
+    display: flex;
+}
+
+.safie {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.sidebar-name {
+    display: inline-block;
+    margin: 0 120px;
+    font-size: 20px;
+}
+
+.information {
+    display: inline-block;
+    margin: 0 20px 0 auto;
+    font-size: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar p {
+    margin: 0;
+    padding: 20px 0 20px 10px;
+}
+
+
+.sidebar p:hover {
+    background-color: gainsboro;
+}
+
+.content {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.flex-content {
+    flex-grow: 1;
+    background-color: gainsboro;
+    box-sizing: border-box;
+    border: 1px solid green;
+}
+
+.box {
+    width: 400px;
+    /* 横幅を200pxに指定 */
+    height: 200px;
+    /* 横幅を200pxに指定 */
+    border: 1px solid #000;
+    /* わかりやすくボーダーを引く */
+    overflow-y: scroll;
+    /* 縦方向にスクロール可能にする */
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+.toggle_btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #0052a4;
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.toggle_btn:before,
+.toggle_btn:after {
+    display: block;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle_btn:before {
+    width: 2px;
+    height: 10px;
+}
+
+
+
+footer {
+    height: 40px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
