@@ -1,0 +1,2 @@
+id,username,email_adress,password,is_manager,is_deleted,note
+1,Taro,taro@gmail.com,Taro,TRUE,TRUE,
